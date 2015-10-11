@@ -77,7 +77,7 @@
     <MtouchI18n>
     </MtouchI18n>
     <CodesignProvision>68e7c237-c015-4c93-aa30-f174980162cd</CodesignProvision>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignEntitlements>Entitlements-Release.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -89,6 +89,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="Entitlements-Release.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
