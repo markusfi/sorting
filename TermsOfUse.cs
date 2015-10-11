@@ -1,6 +1,8 @@
+﻿
+using System;
+
+using Foundation;
 using UIKit;
-using OpenTK.Platform;
-using OpenGLES;
 
 /// <summary>
 /// 
@@ -19,17 +21,30 @@ using OpenGLES;
 /// </summary>
 namespace SortingVisualisation
 {
-	public class Application
+	public partial class TermsOfUse : UIViewController
 	{
-		static void Main (string[] args)
+		public TermsOfUse () : base ("TermsOfUse", null)
 		{
-			using (var c = Utilities.CreateGraphicsContext(EAGLRenderingAPI.OpenGLES1)) {
+		}
 
-				UIApplication.Main (args, null, "AppDelegate");
+		public override void DidReceiveMemoryWarning ()
+		{
+			// Releases the view if it doesn't have a superview.
+			base.DidReceiveMemoryWarning ();
+			
+			// Release any cached data, images, etc that aren't in use.
+		}
 
-			}
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			
+			// Perform any additional setup after loading the view, typically from a nib.
+		}
+		partial void closeClicked (Foundation.NSObject sender)
+		{
+			DismissViewController(true, null);
 		}
 	}
-
 }
 

@@ -13,7 +13,7 @@ namespace SortingVisualisation
 
 		string ISortAlgorithm.SortName()
 		{
-			return "QuickSort";
+			return "Quicksort";
 		}
 		void ISortAlgorithm.Init ()
 		{

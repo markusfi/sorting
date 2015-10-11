@@ -8,7 +8,7 @@ namespace SortingVisualisation
 
 		string ISortAlgorithm.SortName()
 		{
-			return "InsertSort";
+			return "Insertion sort";
 		}
 
 		void ISortAlgorithm.Init()

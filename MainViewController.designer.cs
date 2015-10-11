@@ -9,8 +9,8 @@ using System.CodeDom.Compiler;
 
 namespace SortingVisualisation
 {
-	[Register ("SortingVisualisationAppDelegate")]
-	partial class SortingVisualisationAppDelegate
+	[Register ("MainViewController")]
+	partial class MainViewController
 	{
 		[Outlet]
 		UIKit.UILabel anzahlIterationenLabel { get; set; }
@@ -22,9 +22,6 @@ namespace SortingVisualisation
 		SortingVisualisation.EAGLView glView { get; set; }
 
 		[Outlet]
-		UIKit.UIView mainView { get; set; }
-
-		[Outlet]
 		UIKit.UISegmentedControl segmentedControl { get; set; }
 
 		[Outlet]
@@ -33,17 +30,14 @@ namespace SortingVisualisation
 		[Outlet]
 		UIKit.UILabel sortNameLabel { get; set; }
 
-		[Outlet]
-		UIKit.UIWindow window { get; set; }
-
-		[Action ("colorSwitchChanged:")]
-		partial void colorSwitchChanged (Foundation.NSObject sender);
-
 		[Action ("infoClicked:")]
 		partial void infoClicked (Foundation.NSObject sender);
 
 		[Action ("switchChanged:")]
 		partial void switchChanged (Foundation.NSObject sender);
+
+		[Action ("termsOfUseClicked:")]
+		partial void termsOfUseClicked (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -62,11 +56,6 @@ namespace SortingVisualisation
 				glView = null;
 			}
 
-			if (mainView != null) {
-				mainView.Dispose ();
-				mainView = null;
-			}
-
 			if (segmentedControl != null) {
 				segmentedControl.Dispose ();
 				segmentedControl = null;
@@ -81,20 +70,6 @@ namespace SortingVisualisation
 				sortNameLabel.Dispose ();
 				sortNameLabel = null;
 			}
-
-			if (window != null) {
-				window.Dispose ();
-				window = null;
-			}
-		}
-	}
-
-	[Register ("EAGLView")]
-	partial class EAGLView
-	{
-		
-		void ReleaseDesignerOutlets ()
-		{
 		}
 	}
 }

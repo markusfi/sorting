@@ -11,9 +11,10 @@ using ObjCRuntime;
 
 namespace SortingVisualisation
 {
+	[Register ("EAGLView")]
 	public partial class EAGLView : UIView
 	{
-		public SortingVisualisationAppDelegate appDelegate; 
+		public MainViewController MainViewController; 
 
 		int BackingWidth;
 		int BackingHeight;
@@ -50,8 +51,8 @@ namespace SortingVisualisation
 		public ColorContainer MyColorContainer {
 			get {
 				if (_myColorContainer == null) {
-					bool color = appDelegate.ColorSwitch.On;
-					anzahlElemente = Math.Max (3, Math.Min (255, (int)(appDelegate.Slider.Value * 255f)));
+					bool color = this.MainViewController.ColorSwitch.On;
+					anzahlElemente = Math.Max (3, Math.Min (255, (int)(this.MainViewController.Slider.Value * 255f)));
 					_myColorContainer = new ColorContainer (color ? ElementTyp.Color : ElementTyp.BlackAndWhite, anzahlElemente);
 				}
 				return _myColorContainer;
@@ -65,7 +66,7 @@ namespace SortingVisualisation
 			sortstep = 0;
 			anzahlIterationen = 0;
 			_myColorContainer = null;
-			sortAlgorithm = Math.Max(0,Math.Min(2,(int)appDelegate.SegmentedControl.SelectedSegment));
+			sortAlgorithm = Math.Max(0,Math.Min(3,(int)this.MainViewController.SegmentedControl.SelectedSegment));
 		}
 
 		ISortAlgorithm sort = null;
@@ -121,14 +122,14 @@ namespace SortingVisualisation
 			if (!finish) {
 				if (sort == null) {
 					sort = SortFactory.Create (sortAlgorithm);
-					appDelegate.SetSortName (sort.SortName ());
-					appDelegate.SegmentedControl.SelectedSegment = sortAlgorithm % 3;
+					this.MainViewController.SetSortName (sort.SortName ());
+					this.MainViewController.SegmentedControl.SelectedSegment = sortAlgorithm % 4;
 				}
 				sortstep++;
 				if (AnimationInterval != 0 &&
 				    sortstep % (int)((1 / AnimationInterval) / 30) == 0) {
 					finish = !sort.SortStep (MyColorContainer.ColorElements);
-					appDelegate.AnzahlIterationenLabel.Text = string.Format ("Iterationen {0} bei {1} Elementen", ++this.anzahlIterationen, anzahlElemente);
+					this.MainViewController.AnzahlIterationenLabel.Text = string.Format ("{0} Interations for sorting {1} Elements", ++this.anzahlIterationen, anzahlElemente);
 				}
 			} else {
 				if (sort != null) {
@@ -141,7 +142,7 @@ namespace SortingVisualisation
 				if (AnimationInterval != 0 &&
 					sortstep % (int)((1 / AnimationInterval) * 5) == 0) {
 					finish = false;
-					MyColorContainer.Randomize (1000);
+					MyColorContainer.Randomize (5000);
 				}
 			}
 

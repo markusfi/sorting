@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoPopupOverViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+                <outlet property="webView" destination="os0-30-zpV" id="bOu-4C-f9N"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4AL-Go-Zp6">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="63"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCp-ec-Ifw">
+                    <rect key="frame" x="524" y="25" width="68" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Close">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="closeClicked:" destination="-1" eventType="touchUpInside" id="lEd-ks-UW0"/>
+                    </connections>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="os0-30-zpV">
+                    <rect key="frame" x="0.0" y="63" width="600" height="535"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="External Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEV-8T-Axh">
+                    <rect key="frame" x="236" y="30" width="128" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="os0-30-zpV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="D4J-xA-S1c"/>
+                <constraint firstItem="4AL-Go-Zp6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EJP-KI-eY2"/>
+                <constraint firstItem="zEV-8T-Axh" firstAttribute="centerX" secondItem="os0-30-zpV" secondAttribute="centerX" id="F0B-ed-HNx"/>
+                <constraint firstItem="zEV-8T-Axh" firstAttribute="centerY" secondItem="RCp-ec-Ifw" secondAttribute="centerY" id="RRr-A5-6Ym"/>
+                <constraint firstAttribute="trailing" secondItem="RCp-ec-Ifw" secondAttribute="trailing" constant="8" id="WWb-Mv-6BK"/>
+                <constraint firstAttribute="trailing" secondItem="os0-30-zpV" secondAttribute="trailing" id="bRd-lK-jsj"/>
+                <constraint firstAttribute="trailing" secondItem="4AL-Go-Zp6" secondAttribute="trailing" id="did-6k-AIB"/>
+                <constraint firstAttribute="bottom" secondItem="os0-30-zpV" secondAttribute="bottom" constant="2" id="fwu-PW-RDx"/>
+                <constraint firstItem="RCp-ec-Ifw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="lF0-s8-Qth"/>
+                <constraint firstItem="4AL-Go-Zp6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mOj-8g-hhM"/>
+                <constraint firstItem="os0-30-zpV" firstAttribute="top" secondItem="4AL-Go-Zp6" secondAttribute="bottom" id="ny8-xS-hu4"/>
+                <constraint firstItem="os0-30-zpV" firstAttribute="top" secondItem="RCp-ec-Ifw" secondAttribute="bottom" constant="8" id="ojT-Fo-Geq"/>
+            </constraints>
+            <point key="canvasLocation" x="357" y="396"/>
+        </view>
+    </objects>
+</document>

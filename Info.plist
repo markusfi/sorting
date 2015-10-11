@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMainNibFile</key>
-	<string>MainWindow</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -16,9 +14,9 @@
 		<integer>1</integer>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>8.4</string>
+	<string>9.0</string>
 	<key>UILaunchStoryboardName</key>
-	<string>MainWindow</string>
+	<string>MainViewController</string>
 	<key>XSAppIconAssets</key>
 	<string>Resources/Images.xcassets/AppIcons-1.appiconset</string>
 	<key>CFBundleDisplayName</key>
@@ -28,10 +26,12 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.3</string>
+	<string>1.0.4</string>
 	<key>UIMainNibFile</key>
-	<string>MainWindow</string>
+	<string>MainViewController</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Images.xcassets/LaunchImage.launchimage</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
 </dict>
 </plist>

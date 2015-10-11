@@ -6,7 +6,7 @@ namespace SortingVisualisation
 	{
 		public static ISortAlgorithm Create (int sortAlgorithm)
 		{
-			sortAlgorithm = sortAlgorithm % 3;
+			sortAlgorithm = sortAlgorithm % 4;
 			ISortAlgorithm sort = null;
 			if (sortAlgorithm == 0)
 				sort = new QuickSort ();
@@ -14,6 +14,8 @@ namespace SortingVisualisation
 				sort = new BubbleSort ();
 			else if (sortAlgorithm == 2)
 				sort = new InsertSort ();
+			else if (sortAlgorithm == 3)
+				sort = new MergeSort ();
 
 			sort.Init ();
 			return sort;

@@ -10,16 +10,16 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <customObject id="3" customClass="OpenGLESSampleAppDelegate">
+        <customObject id="3" customClass="SortingVisualisationAppDelegate">
             <connections>
-                <outlet property="anzahlIterationenLabel" destination="DMq-n5-zBP" id="0Qz-Ua-fWT"/>
-                <outlet property="colorSwitch" destination="cTp-2L-yK7" id="g28-kv-i7A"/>
-                <outlet property="glView" destination="Tn1-9F-KMu" id="mHS-aA-Q1e"/>
-                <outlet property="mainView" destination="8" id="8rk-vu-qJf"/>
-                <outlet property="segmentedControl" destination="7ft-DF-hvt" id="mJF-dy-5f4"/>
-                <outlet property="slider" destination="hpn-Uz-OXg" id="LAz-q7-6dP"/>
-                <outlet property="sortNameLabel" destination="11" id="12"/>
-                <outlet property="window" destination="2" id="5"/>
+                <outlet property="anzahlIterationenLabel" destination="DMq-n5-zBP" id="qxg-qv-Hq2"/>
+                <outlet property="colorSwitch" destination="cTp-2L-yK7" id="TYM-ML-L5x"/>
+                <outlet property="glView" destination="Tn1-9F-KMu" id="rz6-nA-YcC"/>
+                <outlet property="mainView" destination="8" id="QP9-ob-Aqg"/>
+                <outlet property="segmentedControl" destination="7ft-DF-hvt" id="tNq-8L-BxF"/>
+                <outlet property="slider" destination="hpn-Uz-OXg" id="85e-yt-OVj"/>
+                <outlet property="sortNameLabel" destination="11" id="zGk-BD-bPg"/>
+                <outlet property="window" destination="2" id="STB-t1-H0f"/>
             </connections>
         </customObject>
         <window clearsContextBeforeDrawing="NO" contentMode="scaleToFill" visibleAtLaunch="YES" id="2">
@@ -29,14 +29,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="InsertSort" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11">
-                            <rect key="frame" x="0.0" y="103" width="320" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InsertSort" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                            <rect key="frame" x="0.0" y="108" width="320" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Anzahl Iterationen:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMq-n5-zBP">
-                            <rect key="frame" x="0.0" y="132" width="320" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anzahl Iterationen:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMq-n5-zBP">
+                            <rect key="frame" x="0.0" y="132" width="320" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -48,15 +48,15 @@
                                 <constraint firstAttribute="height" constant="50" id="qMs-GZ-ixe"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNW-rZ-Bz6" userLabel="View (Top Spacer)">
-                            <rect key="frame" x="160" y="0.0" width="1" height="62"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNW-rZ-Bz6" userLabel="View (Top Spacer)">
+                            <rect key="frame" x="160" y="0.0" width="1" height="67"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="Aug-WK-5Z0"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OJQ-hK-q3Z" userLabel="View (Bottom Spacer)">
-                            <rect key="frame" x="160" y="153" width="1" height="62"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJQ-hK-q3Z" userLabel="View (Bottom Spacer)">
+                            <rect key="frame" x="160" y="148" width="1" height="67"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="cel-pG-hvE"/>
@@ -65,7 +65,7 @@
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTp-2L-yK7">
                             <rect key="frame" x="190" y="296" width="51" height="31"/>
                             <connections>
-                                <action selector="switchChanged:" destination="3" eventType="valueChanged" id="6Ie-zP-VvW"/>
+                                <action selector="switchChanged:" destination="3" eventType="valueChanged" id="Ifo-2v-nWI"/>
                             </connections>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Farbe" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBb-1p-Bfc">
@@ -105,7 +105,7 @@
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hpn-Uz-OXg">
                             <rect key="frame" x="188" y="352" width="114" height="31"/>
                             <connections>
-                                <action selector="switchChanged:" destination="3" eventType="valueChanged" id="jeb-Hv-99M"/>
+                                <action selector="switchChanged:" destination="3" eventType="valueChanged" id="h2D-ER-jwb"/>
                             </connections>
                         </slider>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anzahl Segmente" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKz-lY-xNA">
@@ -122,15 +122,24 @@
                                 <segment title="Insertsort"/>
                             </segments>
                             <connections>
-                                <action selector="switchChanged:" destination="3" eventType="valueChanged" id="sFe-g0-PGG"/>
+                                <action selector="switchChanged:" destination="3" eventType="valueChanged" id="bJD-qJ-sk8"/>
                             </connections>
                         </segmentedControl>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Visualisierung der Sortierung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10">
-                            <rect key="frame" x="0.0" y="62" width="320" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visualisierung der Sortierung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                            <rect key="frame" x="0.0" y="67" width="320" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SK9-3m-JAr">
+                            <rect key="frame" x="278" y="105" width="22" height="22"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="infoClicked:" destination="3" eventType="touchUpInside" id="oEL-z4-PxP"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -151,6 +160,7 @@
                         <constraint firstItem="Tn1-9F-KMu" firstAttribute="leading" secondItem="8" secondAttribute="leading" constant="8" id="GZC-5r-SXY"/>
                         <constraint firstItem="IJ8-Ff-klC" firstAttribute="top" secondItem="7ft-DF-hvt" secondAttribute="bottom" id="JO3-GU-Yoo"/>
                         <constraint firstItem="10" firstAttribute="leading" secondItem="8" secondAttribute="leading" id="KFP-my-CvR"/>
+                        <constraint firstAttribute="trailing" secondItem="SK9-3m-JAr" secondAttribute="trailing" constant="20" id="KyY-Ba-3Mk"/>
                         <constraint firstItem="11" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="20" id="Lmq-Ln-QXd"/>
                         <constraint firstItem="Tn1-9F-KMu" firstAttribute="top" secondItem="OJQ-hK-q3Z" secondAttribute="bottom" id="MQi-zk-yTp"/>
                         <constraint firstItem="3dJ-17-2eS" firstAttribute="height" secondItem="mBp-S5-nu7" secondAttribute="height" id="Oa8-Vo-u2d"/>
@@ -178,6 +188,7 @@
                         <constraint firstItem="mBp-S5-nu7" firstAttribute="top" secondItem="sBb-1p-Bfc" secondAttribute="bottom" id="qPg-LB-CXM"/>
                         <constraint firstItem="3dJ-17-2eS" firstAttribute="height" secondItem="X2q-B0-6FQ" secondAttribute="height" id="rNz-6r-4of"/>
                         <constraint firstItem="X2q-B0-6FQ" firstAttribute="top" secondItem="Tn1-9F-KMu" secondAttribute="bottom" id="xAy-e7-Ubt"/>
+                        <constraint firstItem="11" firstAttribute="centerY" secondItem="SK9-3m-JAr" secondAttribute="centerY" id="yc7-km-Alx"/>
                     </constraints>
                 </view>
             </subviews>

@@ -9,7 +9,7 @@ namespace SortingVisualisation
 
 		string ISortAlgorithm.SortName()
 		{
-			return "BubbleSort";
+			return "Bubble sort";
 		}		
 		void ISortAlgorithm.Sort(IMarkable[] elements)
 		{

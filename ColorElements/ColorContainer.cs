@@ -11,7 +11,7 @@ namespace SortingVisualisation
 			for (byte i = 0; i < count; i++) {
 				ColorElements [i] = ElementFactory.CreateElement(elementTyp, (float)(i + 1f) / (float)count);
 			}
-			Randomize(1000);
+			Randomize(5000);
 		}
 		public byte[] ColorElement(int pos)
 		{
