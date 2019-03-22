@@ -24,11 +24,10 @@
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>True</MtouchDebug>
     <ConsolePause>False</ConsolePause>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <MtouchI18n>
     </MtouchI18n>
     <CodesignKey>iPhone Distribution: Markus Fischer (8LR9UZJY9J)</CodesignKey>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <CodesignProvision>68e7c237-c015-4c93-aa30-f174980162cd</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -55,7 +54,6 @@
     <MtouchArch>ARMv7</MtouchArch>
     <IpaPackageName>
     </IpaPackageName>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchI18n>
     </MtouchI18n>
@@ -73,7 +71,6 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <IpaPackageName>
     </IpaPackageName>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchI18n>
     </MtouchI18n>
     <CodesignProvision>68e7c237-c015-4c93-aa30-f174980162cd</CodesignProvision>
